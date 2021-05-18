@@ -8,7 +8,8 @@ the renderer code moved into a nested `node_modules` folder.
 
 ## To Use
 
-0. Clone and run `npm i`. It has the lastest verisons of `electron` and `electron-builder`.
+0. Clone/fork/whatever and run `npm i`. It has the lastest verisons of `electron` 
+   and `electron-builder`.
 
 1. Optionally test that everything works by running Electron normally. The repo has a
    `.vscode` for doing this in VSCode. The default `create-electron-app` should

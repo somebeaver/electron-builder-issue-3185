@@ -1,0 +1,49 @@
+{
+  "name": "electron-builder-issue-3185",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^12.0.8",
+    "electron-builder": "^22.10.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:somebeaver/electron-builder-issue-3185.git"
+  },
+  "license": "MIT",
+  "build": {
+    "appId": "electron-builder-issue-3185",
+    "productName": "Electron-Builder Issue 3185",
+    "files": [
+      "*/**",
+      "src/embedded-submodule/node_modules/**"
+    ],
+    "mac": {
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "extendInfo": {
+        "LSUIElement": 1
+      }
+    },
+    "win": {
+      "target": "NSIS"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    }
+  },
+  "publish": {
+    "provider": "github",
+    "owner": "somebeaver",
+    "private": false,
+    "releaseType": "release"
+  }
+}

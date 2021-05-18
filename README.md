@@ -24,6 +24,8 @@ the renderer code moved into a nested `node_modules` folder.
 
    `> npx asar extract app.asar out`
 
+   I am not sure where the asar archive is on Windows, sorry.
+
 4. See that `src/embedded-submodule/node_modules/` is missing
 
 ## package.json
@@ -35,3 +37,5 @@ big deviation from the current behaviour, which is now two years old.
 
 The second pattern feels like it should work because it is so explicit in naming
 the nested `node_modules`, but it does not. Hopefully this can be made to work.
+
+Removing the `build.files` property altogether does not fix the issue.
